@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="css/app.css" rel="stylesheet">
     <script defer src="js/alpine.js"></script>
+     <!-- Demo styles -->
+  <style>   
+    .swiper-pagination-bullet  {
+        height: 5px !important;
+        width: 20px !important;
+        border-radius: 0;
+        background-color: black !important;
+    }
+    .swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom: -20px;
+    }
+  </style>
 </head>
 <body >
     <header>
@@ -14,38 +27,39 @@
                 <nav class="flex items-center w-full h-24 px-10 select-none" x-data="{ showMenu: false }">
                     <div class="relative flex flex-wrap items-start justify-between w-full mx-auto font-medium md:items-center md:h-24 md:justify-between">
                         <a href="#_" class="flex items-center w-1/4 py-4 pl-6 pr-4 space-x-2 font-extrabold text-white md:py-0">
-                            <span class="flex items-center justify-center flex-shrink-0 w-8 h-8 text-gray-900 rounded-full bg-gradient-to-br from-white via-gray-200 to-white">
-                                <svg class="w-auto h-5 -translate-y-px" viewBox="0 0 69 66" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m31.2 12.2-3.9 12.3-13.4.5-13.4.5 10.7 7.7L21.8 41l-3.9 12.1c-2.2 6.7-3.8 12.4-3.6 12.5.2.2 5-3 10.6-7.1 5.7-4.1 10.9-7.2 11.5-6.8.6.4 5.3 3.8 10.5 7.5 5.2 3.8 9.6 6.6 9.8 6.4.2-.2-1.4-5.8-3.6-12.5l-3.9-12.2 8.5-6.2c14.7-10.6 14.8-9.6-.4-9.7H44.2L40 12.5C37.7 5.6 35.7 0 35.5 0c-.3 0-2.2 5.5-4.3 12.2Z" fill="currentColor"/></svg>
-                            </span>
-                            <span>LOGO</span>
+                            <img class="h-20" src="assets/logo.png" alt="">
                         </a>
-                        <div :class="{'flex': showMenu, 'hidden md:flex': !showMenu }" class="absolute z-50 flex-col items-center justify-center w-full h-auto px-2 text-center text-gray-400 -translate-x-1/2 border-0 border-gray-700 rounded-full md:border md:w-auto md:h-10 left-1/2 md:flex-row md:items-center">
-                            <a href="#" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center text-white md:py-2 group md:w-auto md:px-2 lg:mx-3 md:text-center">
-                                <span>Home</span>
+                        <div :class="{'flex': showMenu, 'hidden md:flex': !showMenu }" class="absolute z-50 flex-col items-center justify-center w-full h-auto px-2 text-center text-white -translate-x-1/2 border-0 border-white rounded-full md:border md:w-auto md:h-10 left-1/2 md:flex-row md:items-center">
+                            <a href="#" class="relative inline-block w-full h-full  py-5 mx-2 font-medium leading-tight text-center text-white md:py-2 group md:w-auto  md:text-center">
+                                <span>About Us</span>
                                 <span class="absolute bottom-0 left-0 w-full h-px duration-300 ease-out translate-y-px bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900"></span>
                             </a>
                             <a href="#" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center">
-                                <span>Features</span>
+                                <span>Type of yachts</span>
                                 <span class="absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900"></span>
                             </a>
                             <a href="#" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center">
-                                <span>Blog</span>
+                                <span>Our Collections</span>
                                 <span class="absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900"></span>
                             </a>
                             <a href="#" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center">
-                                <span>Contact</span>
+                                <span>Reviews</span>
+                                <span class="absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900"></span>
+                            </a>
+                            <a href="#" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center">
+                                <span>Contacts</span>
                                 <span class="absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900"></span>
                             </a>
                         </div>
                         <div class="fixed top-0 left-0 z-40 items-center hidden w-full h-full p-3 text-sm bg-gray-900 bg-opacity-50 md:w-auto md:bg-transparent md:p-0 md:relative md:flex" :class="{'flex': showMenu, 'hidden': !showMenu }">
-                            <div class="flex-col items-center w-full h-full p-3 overflow-hidden bg-black bg-opacity-50 rounded-lg select-none md:p-0 backdrop-blur-lg md:h-auto md:bg-transparent md:rounded-none md:relative md:flex md:flex-row md:overflow-auto">
+                            <div class="flex-col items-center w-full h-full p-3 overflow-hidden bg-black bg-opacity-50 rounded-lg select-none md:p-0  md:h-auto md:bg-transparent md:rounded-none md:relative md:flex md:flex-row md:overflow-auto">
                                 <div class="flex flex-col items-center justify-end w-full h-full pt-2 md:w-full md:flex-row md:py-0">
                                     <a href="#_" class="w-full py-5 mr-0 text-center text-gray-200 md:py-3 md:w-auto hover:text-white md:pl-0 md:mr-3 lg:mr-5">Sign In</a>
                                     <a href="#_" class="inline-flex items-center justify-center w-full px-4 py-3 md:py-1.5 font-medium leading-6 text-center whitespace-no-wrap transition duration-150 ease-in-out border border-transparent md:mr-1 text-gray-600 md:w-auto bg-white rounded-lg md:rounded-full hover:bg-white focus:outline-none focus:border-gray-700 focus:shadow-outline-gray active:bg-gray-700">Sign Up</a>
                                 </div>
                             </div>
                         </div>
-                        <div @click="showMenu = !showMenu" class="absolute right-0 z-50 flex flex-col items-end translate-y-1.5 w-10 h-10 p-2 mr-4 rounded-full cursor-pointer md:hidden hover:bg-gray-200/10 hover:bg-opacity-10" :class="{ 'text-gray-400': showMenu, 'text-gray-100': !showMenu }">
+                        <div @click="showMenu = !showMenu" class="absolute top-10 right-0 z-50 flex flex-col items-end translate-y-1.5 w-10 h-10 p-2 mr-4 rounded-full cursor-pointer md:hidden hover:bg-gray-200/10 hover:bg-opacity-10" :class="{ 'text-gray-400': showMenu, 'text-gray-100': !showMenu }">
                             <svg class="w-6 h-6" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" x-cloak>
                                 <path d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
@@ -60,12 +74,14 @@
         
     </header>
     <main>
-        <section class="bg-black max-w-screen-xl mx-auto px-10">
-            <div class=" py-40 px-10 text-white space-y-4">
-                <p class="text-5xl w-2/4 font-libre">Luxury Yachit Charters For Your Dream Vacation</p>
-                <p class="font-xs font-sans"> Exprience the ultimate in luxury and adventure with our yacht rental services.</p>
+        <section class="bg-[url('../assets/cover2.png');] bg-center bg-no-repeat bg-cover object-cover max-w-screen-xl mx-auto px-10 ">
+            <div class="flex flex-col md:justify-start justify-center items-center lg:items-start py-40  text-white space-y-4 lg:w-2/4">
+                <div class="lg:text-start text-center">
+                    <p class="lg:text-5xl text-3xl  font-libre">Luxury Yachit Charters For Your Dream Vacation</p>
+                    <p class="text-xl font-sans"> Exprience the ultimate in luxury and adventure with our yacht rental services.</p>
+                </div>
                 <div>
-                    <a href="#" class="inline-flex items-center h-10 rounded-full bg-black hover:bg-white border-2 border-white text-center p-2  gap-2 px-5 text-white hover:text-black whitespace-nowrap duration-700">
+                    <a href="#" class="inline-flex items-center h-10 rounded-full bg-white hover:bg-transparent border-2 border-white text-center py-6 px-8  gap-2  text-black hover:text-white htext-black whitespace-nowrap duration-700">
                         <span>Get started</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
@@ -75,9 +91,9 @@
             </div>
         </section>
         <!--Section-02-->
-        <section class="max-w-screen-xl mx-auto px-20 py-14">
-            <div class="grid lg:grid-cols-2 gap-16 justify-center">
-                <div class="grid md:grid-cols-2 gap-5">
+        <section class="max-w-screen-xl mx-auto px-20 py-14 ">
+            <div class="grid lg:grid-cols-2 gap-20 justify-center">
+                <div class="grid md:grid-cols-2 gap-5 ">
                     <div class="space-y-5">
                         <div class="relative">
                             <div class="absolute bg-white py-5 px-7 space-y-2 rounded-md">
@@ -85,17 +101,17 @@
                                 <p class="font-medium text-xs">MOTOR BOATS</p>
                             </div>
                             <div>
-                                <img src="assets/avater-2.png" alt="">
+                                <img src="assets/card-01.jpg" alt="">
                             </div>
                         </div>
                         <div>
-                            <img src="assets/avater-3.png" alt="">
+                            <img src="assets/card-2.jpg" alt="">
                         </div>
                     </div>
                     <div class="relative">
-                        <div>
-                            <img  class="absolute h-[100%] top-10 " src="assets/avater-2.png" alt="">
-                            <div class="absolute left-[25%] -bottom-10 bg-white py-5 px-7 space-y-2 rounded-md ">
+                        <div >
+                            <img  class="mt-10" src="assets/card-3.jpg" alt="">
+                            <div class="absolute left-[12%] bottom-[20%] bg-white py-5 px-7 space-y-2 rounded-md ">
                                 <p class="text-4xl font-semibold">200+</p>
                                 <p class="font-medium text-xs">MOTOR BOATS</p>
                             </div>
@@ -106,8 +122,8 @@
                     <div>
                         <div class="space-y-8">
                             <p class="py-2 px-3 text-xs font-medium  border-2 border-gray-400 rounded-full inline-flex">ABOUT COMPANY</p>
-                            <p class="font-libre text-5xl">Find and Book Your Dream Yacht</p>
-                            <p>Our mission is to provide everyone with high and useful reward for his/her trading, purchase and investment. Our goal is to make the cryptocurrency market grow faster. Our goal is to educate global citizens on the indurstry so they are not left behind during the next financial and technological.</p>
+                            <p class="font-libre text-2xl md:4xl  lg:text-5xl">Find and Book Your Dream Yacht</p>
+                            <p class="text-xs md:text-base">Our mission is to provide everyone with high and useful reward for his/her trading, purchase and investment. Our goal is to make the cryptocurrency market grow faster. Our goal is to educate global citizens on the indurstry so they are not left behind during the next financial and technological.</p>
                             <ul class="list-image-check text-xl">
                                 <li>Stunning Cruise</li>
                                 <li>Stunning Cruise</li>
@@ -126,18 +142,572 @@
                 </div>
             </div>
         </section>
-        <section class=" px-20 py-14 bg-green-950">
-            <div class="max-w-screen-xl mx-auto ">
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 ">
-                    <div class="space-y-5">
+         <!--Section-03-->
+        <section class=" md:px-20 py-14 bg-green-950  ">
+            <div class="max-w-screen-xl mx-auto px-20">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-28">
+                    <div class="space-y-7 text-white">
                         <div>
-                            <img src="assets/boat.svg" alt="">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 21.1932C2.68524 22.2443 3.57104 22.2443 4.27299 21.1932C6.52985 17.7408 8.67954 23.6764 10.273 21.2321C12.703 17.5694 14.4508 23.9218 16.273 21.1932C18.6492 17.5582 20.1295 23.5776 22 21.5842" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3.57228 17L2.07481 12.6457C1.80373 11.8574 2.30283 11 3.03273 11H20.8582C23.9522 11 19.9943 17 17.9966 17" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 11L15.201 7.50122C14.4419 6.55236 13.2926 6 12.0775 6H8C6.89543 6 6 6.89543 6 8V11" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 6V3C10 2.44772 9.55228 2 9 2H8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="space-y-6">
+                            <p class="font-libre text-2xl">Luxury Yachit</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Ut elit tellus auctor mollis.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6 text-white">
+                        <div>
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 21.1932C2.68524 22.2443 3.57104 22.2443 4.27299 21.1932C6.52985 17.7408 8.67954 23.6764 10.273 21.2321C12.703 17.5694 14.4508 23.9218 16.273 21.1932C18.6492 17.5582 20.1295 23.5776 22 21.5842" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3.57228 17L2.07481 12.6457C1.80373 11.8574 2.30283 11 3.03273 11H20.8582C23.9522 11 19.9943 17 17.9966 17" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 11L15.201 7.50122C14.4419 6.55236 13.2926 6 12.0775 6H8C6.89543 6 6 6.89543 6 8V11" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 6V3C10 2.44772 9.55228 2 9 2H8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="space-y-6">
+                            <p class="font-libre text-2xl">Luxury Yachit</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Ut elit tellus auctor mollis.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-7 text-white">
+                        <div>
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 21.1932C2.68524 22.2443 3.57104 22.2443 4.27299 21.1932C6.52985 17.7408 8.67954 23.6764 10.273 21.2321C12.703 17.5694 14.4508 23.9218 16.273 21.1932C18.6492 17.5582 20.1295 23.5776 22 21.5842" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3.57228 17L2.07481 12.6457C1.80373 11.8574 2.30283 11 3.03273 11H20.8582C23.9522 11 19.9943 17 17.9966 17" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 11L15.201 7.50122C14.4419 6.55236 13.2926 6 12.0775 6H8C6.89543 6 6 6.89543 6 8V11" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 6V3C10 2.44772 9.55228 2 9 2H8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="space-y-6">
+                            <p class="font-libre text-2xl">Luxury Yachit</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Ut elit tellus auctor mollis.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-7 text-white">
+                        <div>
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 21.1932C2.68524 22.2443 3.57104 22.2443 4.27299 21.1932C6.52985 17.7408 8.67954 23.6764 10.273 21.2321C12.703 17.5694 14.4508 23.9218 16.273 21.1932C18.6492 17.5582 20.1295 23.5776 22 21.5842" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M3.57228 17L2.07481 12.6457C1.80373 11.8574 2.30283 11 3.03273 11H20.8582C23.9522 11 19.9943 17 17.9966 17" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 11L15.201 7.50122C14.4419 6.55236 13.2926 6 12.0775 6H8C6.89543 6 6 6.89543 6 8V11" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 6V3C10 2.44772 9.55228 2 9 2H8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="space-y-6">
+                            <p class="font-libre text-2xl">Luxury Yachit</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipscing elit. Ut elit tellus auctor mollis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!--Section-04-->
+        <section class="max-w-screen-xl mx-auto px-10 md:px-20 py-14  ">
+            <div class="space-y-5">
+                <div class="flex flex-col text-center md:text-start  md:flex-row justify-center md:justify-between items-center gap-y-10">
+                    <div class="space-y-3 lg:space-y-5">
+                        <p class="py-2 px-3 text-xs font-medium  border-2 border-gray-400 rounded-full inline-flex">ABOUT COMPANY</p>
+                        <p class="text-2xl md:text-3xl lg:text-5xl  font-libre">know what You're Looking</p>
+                        <p class="text-2xl md:text-3xl lg:text-5xl  font-libre">for? Search by Yachit Type</p>
+                    </div>
+                    <div>
+                        <a href="#" class="inline-flex items-center h-10 rounded-full bg-[#012931] border-2 border-white text-center p-5  gap-2 px-5 text-white whitespace-nowrap duration-700">
+                            <span>Get started</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
+                    <div class="relative">
+                        <img class="h-[450px]" src="assets/card-4.jpg" alt="">
+                        <a href="#" class="bg-white  border-4 border-white hover:bg-transparent duration-700 rounded-full p-3 md:p-4 absolute top-5 right-[10%]">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12L4 12" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 17C15 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <div class="absolute bottom-0 left-8 text-white pb-8">
+                            <p class="pb-3">Over 20000 Yachts</p>
+                            <p class="font-libre text-5xl">Motor</p>
+                            <p class="font-libre text-5xl">Yachts</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div>
+                            <img class="h-[450px]" src="assets/card-4.jpg" alt="">
+                        </div>
+                        <a href="#" class="bg-white  border-4 border-white hover:bg-transparent duration-700 rounded-full p-3 md:p-4 absolute top-5 right-[10%]">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12L4 12" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 17C15 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <div class="absolute bottom-0 left-8 text-white pb-8">
+                            <p class="pb-3">Over 20000 Yachts</p>
+                            <p class="font-libre text-5xl">Motor</p>
+                            <p class="font-libre text-5xl">Yachts</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div>
+                            <img class="h-[450px]" src="assets/card-4.jpg" alt="">
+                        </div>
+                        <a href="#" class="bg-white  border-4 border-white hover:bg-transparent duration-700 rounded-full p-3 md:p-4 absolute top-5 right-[10%]">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12L4 12" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 17C15 17 20 13.3176 20 12C20 10.6824 15 7 15 7" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <div class="absolute bottom-0 left-8 text-white pb-8">
+                            <p class="pb-3">Over 20000 Yachts</p>
+                            <p class="font-libre text-5xl">Motor</p>
+                            <p class="font-libre text-5xl">Yachts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+         <!--Section-05-->
+        <section class="px-10 md:px-20 py-14 bg-[url('../assets/cover2.png');] bg-center bg-no-repeat bg-cover object-cover  bg-blend-overlay bg-black bg-opacity-20">
+            <div class="max-w-screen-xl mx-auto">
+                <div class="flex justify-center lg:justify-end text-white">
+                    <div class=" w-full lg:w-1/2 space-y-10 text-start">
+                        <p class="py-2 px-3 text-xs font-medium  border border-white rounded-full inline-flex">OUR BENEFITS</p>
+                        <p class="text-3xl md:text-5xl font-libre">Why Book With Us</p>
+                        <div class="flex gap-5">
+                            <div>
+                                <img class="h-10 w-16 rounded-md flex justify-center" src="assets/boat.png" alt="">
+                            </div>
+                            <div class="space-y-4">
+                                <p class="font-libre text-2xl lg:text-4xl">Largest Choice Of Yachts</p>
+                                <p class="text-base md:text-xl">Our network of approved charter brokers have access to the entire market and possess the specialist knowledge.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div>
+                                <img class="h-10 w-16 rounded-md" src="assets/compass.png" alt="">
+                            </div>
+                            <div class="space-y-4">
+                                <p class="font-libre text-2xl lg:text-4xl">Largest Choice Of Yachts</p>
+                                <p class="text-base md:text-xl">Our network of approved charter brokers have access to the entire market and possess the specialist knowledge.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
         </section>
+        <!--Section-06-->
+        <section class="max-w-screen-xl mx-auto px-20 py-14 ">
+            <div class="space-y-10">
+                <div class="flex flex-col text-center  md:flex-row justify-center md:justify-between items-center gap-y-10">
+                    <div class="space-y-3 lg:space-y-5">
+                        <p class="py-2 px-3 text-xs font-medium  border-2 border-gray-400 rounded-full inline-flex">ABOUT COMPANY</p>
+                        <p class="text-2xl md:text-3xl lg:text-5xl  font-libre">know what You're Looking</p>
+                        <p class="text-2xl md:text-3xl lg:text-5xl  font-libre">for? Search by Yachit Type</p>
+                    </div>
+                    <div>
+                        <a href="#" class="inline-flex items-center h-10 rounded-full bg-[#012931] border-2 border-white text-center p-5  gap-2 px-5 text-white whitespace-nowrap duration-700">
+                            <span>Get started</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
+                    <div class="group">
+                        <div class="relative">
+                            <div class="absolute top-5 left-0 opacity-0 group-hover:opacity-100 duration-700">
+                                <a href="#" class="p-5 bg-black text-white">Premium Class</a>
+                            </div>
+                            <img src="assets/card-3.jpg" alt="">
+                            <div class="absolute bottom-0">
+                                <div class="bg-white bg-opacity-50 p-2 space-y-2 md:space-y-5">
+                                    <div class="flex justify-between">
+                                        <p class="text-2xl md:text-4xl font-medium font-libre">Sernity</p>
+                                        <p class="text-xl font-medium">$450/day</p>
+                                    </div>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupetem accusantium</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="relative">
+                            <div class="absolute top-5 left-0 opacity-0 group-hover:opacity-100 duration-700">
+                                <a href="#" class="p-5 bg-black text-white">Premium Class</a>
+                            </div>
+                            <img src="assets/card-5.jpg" alt="">
+                            <div class="absolute bottom-0">
+                                <div class="bg-white bg-opacity-50 p-2 space-y-2 md:space-y-5">
+                                    <div class="flex justify-between">
+                                        <p class="text-2xl md:text-4xl font-medium font-libre">Sernity</p>
+                                        <p class="text-xl font-medium">$450/day</p>
+                                    </div>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupetem accusantium</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="relative">
+                            <div class="absolute top-5 left-0 opacity-0 group-hover:opacity-100 duration-700">
+                                <a href="#" class="p-5 bg-black text-white">Premium Class</a>
+                            </div>
+                            <img src="assets/card-3.jpg" alt="">
+                            <div class="absolute bottom-0">
+                                <div class="bg-white bg-opacity-50 p-2 space-y-2 md:space-y-5">
+                                    <div class="flex justify-between">
+                                        <p class="text-2xl md:text-4xl font-medium font-libre">Sernity</p>
+                                        <p class="text-xl font-medium">$450/day</p>
+                                    </div>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupetem accusantium</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="relative">
+                            <div class="absolute top-5 left-0 opacity-0 group-hover:opacity-100 duration-700">
+                                <a href="#" class="p-5 bg-black text-white">Premium Class</a>
+                            </div>
+                            <img src="assets/card-5.jpg" alt="">
+                            <div class="absolute bottom-0">
+                                <div class="bg-white bg-opacity-50 p-2 space-y-2 md:space-y-5">
+                                    <div class="flex justify-between">
+                                        <p class="text-2xl md:text-4xl font-medium font-libre">Sernity</p>
+                                        <p class="text-xl font-medium">$450/day</p>
+                                    </div>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupetem accusantium</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="relative">
+                            <div class="absolute top-5 left-0 opacity-0 group-hover:opacity-100 duration-700">
+                                <a href="#" class="p-5 bg-black text-white">Premium Class</a>
+                            </div>
+                            <img src="assets/card-3.jpg" alt="">
+                            <div class="absolute bottom-0">
+                                <div class="bg-white bg-opacity-50 p-2 space-y-2 md:space-y-5">
+                                    <div class="flex justify-between">
+                                        <p class="text-2xl md:text-4xl font-medium font-libre">Sernity</p>
+                                        <p class="text-xl font-medium">$450/day</p>
+                                    </div>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupetem accusantium</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="relative">
+                            <div class="absolute top-5 left-0 opacity-0 group-hover:opacity-100 duration-700">
+                                <a href="#" class="p-5 bg-black text-white">Premium Class</a>
+                            </div>
+                            <img src="assets/card-5.jpg" alt="">
+                            <div class="absolute bottom-0">
+                                <div class="bg-white bg-opacity-50 p-2 space-y-2 md:space-y-5">
+                                    <div class="flex justify-between">
+                                        <p class="text-2xl md:text-4xl font-medium font-libre">Sernity</p>
+                                        <p class="text-xl font-medium">$450/day</p>
+                                    </div>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupetem accusantium</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section-07-->
+        <section class="max-w-screen-xl mx-auto py-14  ">
+            <div class="bg-[url('../assets/yaht.jpg');] py-40 bg-center bg-no-repeat bg-cover">
+                <div class="flex flex-col justify-center items-center gap-y-5">
+                    <p class="font-libre text-3xl md:text-3xl lg:text-5xl text-white">Discover Our Collections</p>
+                    <div class="flex gap-x-8 items-center">
+                        <div>
+                            <a href="#" class="inline-flex items-center h-10 rounded-full bg-white  text-center py-6 gap-2 px-5">
+                                <span>Get started</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="" class="bg-white bg-opacity-60 p-5 rounded-full text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section-08-->
+        <section class="max-w-screen-xl mx-auto px-20 py-14 ">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-x-10">
+                <div class="px-10">
+                    <img class="" src="assets/review.png" alt="">
+                </div>
+                <div class="space-y-10 relative">
+                    <p class="py-2 px-3 text-xs font-medium  border border-black rounded-full inline-flex">OUR BENEFITS</p>
+                    <p class="text-4xl font-libre">What People Say About Us</p>
+                    <p class="text-xl">Exprience the ultimate in luxury and adventure with our yacht rental services.Lorem ipsum dolor sit amet, consectur adipiscing elit. Ut elit tellus, lectus nec ullamcorper mattis.</p>
+                    <!-- Swiper -->
+                   <div class="swiper mySwiper ">
+                       <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="border border-black space-y-5 p-5"> 
+                                <div class="flex flex-wrap justify-center lg:justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p>A dream come true! we rented a yaht for our wedding reception, and it was the most magical Exprience. the yaht was elegant and luxurious, and the ensured everything ran smoothly.</p>
+                                </div>
+                                <div class="flex gap-x-2">
+                                    <div>
+                                        <img class="h-10 w-10 rounded-full" src="assets/person-1.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Michael Thompson</p>
+                                        <p class="text-xs">united kingdom</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="border border-black space-y-5 p-5"> 
+                                <div class="flex flex-wrap justify-center lg:justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p>A dream come true! we rented a yaht for our wedding reception, and it was the most magical Exprience. the yaht was elegant and luxurious, and the ensured everything ran smoothly.</p>
+                                </div>
+                                <div class="flex gap-x-2">
+                                    <div>
+                                        <img class="h-10 w-10 rounded-full" src="assets/avater-2.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Michael Thompson</p>
+                                        <p class="text-xs">united kingdom</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="border border-black space-y-5 p-5"> 
+                                <div class="flex flex-wrap justify-center lg:justify-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fcd34d" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d" class=" w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p>A dream come true! we rented a yaht for our wedding reception, and it was the most magical Exprience. the yaht was elegant and luxurious, and the ensured everything ran smoothly.</p>
+                                </div>
+                                <div class="flex gap-x-2">
+                                    <div>
+                                        <img class="h-10 w-10 rounded-full" src="assets/avater-2.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Michael Thompson</p>
+                                        <p class="text-xs">united kingdom</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                    <div class=" justify-start swiper-pagination "></div>
+                </div>
+            </div>
+        </section>
+        <!--Section-09-->
+        <section class="max-w-screen-xl mx-auto px-10 lg:px-20 py-14 bg-[url('../assets/yaht.jpg')] bg-cover bg-no-repeat bg-center bg-blend-overlay bg-black bg-opacity-20 ">
+            <div class="flex justify-center lg:justify-end">
+                <form class="lg:w-1/2 space-y-5 text-white">
+                    <div class="space-y-4 text-center md:text-start">
+                        <p class="font-libre text-4xl">Book Your Yacht</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, lectus nec ullamcorper mattis.</p>
+                    </div>
+                    <div class="w-full ">
+                        <label for="first-name" class="">NAME*</label>
+                        <div class="mt-2">
+                          <input type="text" placeholder="Your Name" name="first-name" id="first-name" autocomplete="given-name" class="rounded-sm placeholder:text-white pl-3 focus:outline-none w-full py-3 bg-transparent border border-gray-400">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="first-name" class="">Contact*</label>
+                        <div class="flex gap-10 ">
+                            <div class="mt-2 w-full">
+                              <input type="text" placeholder="E-mail" name="first-name" id="first-name" autocomplete="given-name" class="rounded-sm placeholder:text-white pl-3 focus:outline-none w-full py-3 bg-transparent border border-gray-400">
+                            </div>
+                            <div class="mt-2 w-full">
+                              <input type="text" placeholder="Phone" name="first-name" id="first-name" autocomplete="given-name" class="rounded-sm placeholder:text-white pl-3 focus:outline-none w-full py-3 bg-transparent border border-gray-400">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full ">
+                        <label for="first-name" class="">Boat Type*</label>
+                        <div class="mt-2 w-full">
+                            <select id="boat" name="boat" autocomplete="Regular Yacht" class="block w-full rounded-sm border border-gray-400 pl-3 py-3 focus:text-black bg-transparent">
+                              <option>Regular Yachit</option>
+                              <option>Select</option>
+                              <option>Select</option>
+                              <option>Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="">
+                        <label for="about" class="">About</label>
+                        <div class="mt-2">
+                          <textarea id="about" placeholder="Your massage" name="about" rows="4" class="block w-full rounded-sm  py-1.5 bg-transparent border border-gray-400 focus:outline-none placeholder:text-white pl-3 pt-8"></textarea>
+                        </div>
+                    </div>
+                    <button type="button" class="inline-flex items-center h-10 rounded-full bg-white  text-center py-6 gap-2 px-5">
+                        <span class="text-black">Send</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-black">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                          </svg>
+                          
+                    </button>
+                </form>
+            </div>
+        </section>
     </main>
+    <footer class="bg-[#0C2930] ">
+        <div class="mx-auto max-w-screen-xl px-10 lg:px-20 py-14">
+            <div class="grid grid-cols-12 gap-y-10 md:gap-x-10 text-white justify-center">
+                <div class="space-y-4 col-span-full sm:col-span-6 lg:col-span-3">
+                    <img class="h-20 w-32 flex justify-center" src="assets/logo.png" alt="">
+                    <p>Seafarer, a WP theme equipped with the utmest practical fatures for your yacht & boat rental bussiness</p>
+                    <ul class="flex justify-center md:justify-start gap-x-4">
+                        <li class=" hover:bg-sky rounded-full">
+                            <a href="#" class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class=" hover:bg-sky rounded-full">
+                            <a href="#" class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class=" hover:bg-sky  rounded-full">
+                            <a href="#" class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class=" hover:bg-sky  rounded-full">
+                            <a href="#" class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-full sm:col-span-6 lg:col-span-3">
+                    <p class="text-xl pb-5 font-libre">OUR COMPANY</p>
+                    <ul class="space-y-3">
+                        <li>About us</li>
+                        <li>Type of yachts</li>
+                        <li>Our Collections</li>
+                        <li>Reviews</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="col-span-full sm:col-span-6 lg:col-span-3">
+                    <p class="text-xl pb-5 font-libre">OUR COMPANY</p>
+                    <ul class="space-y-3">
+                        <li>About us</li>
+                        <li>Type of yachts</li>
+                        <li>Our Collections</li>
+                        <li>Reviews</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="col-span-full sm:col-span-6 lg:col-span-3">
+                    <p class="text-xl pb-5 font-libre">OUR COMPANY</p>
+                    <ul class="space-y-3">
+                        <li>About us</li>
+                        <li>Type of yachts</li>
+                        <li>Our Collections</li>
+                        <li>Reviews</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 </html>
